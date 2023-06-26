@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws EmaiNotValid {
+    public static void main(String[] args) throws EmailNotValid {
         Scanner eingbe = new Scanner(System.in);
         //String email = eingbe.nextLine();
         String email = "";
@@ -18,9 +18,9 @@ public class Main {
         } else System.out.println("nicht ok");
     }
 
-    private static boolean istStringNull(String email) throws EmaiNotValid{
+    private static boolean istStringNull(String email) throws EmailNotValid{
         if(email == null || email.isBlank())
-            throw new EmaiNotValid("ERROR: email ist leer");
+            throw new EmailNotValid("ERROR: email ist leer");
         return false;
     }
 
