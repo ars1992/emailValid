@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws EmaiNotValid {
         Scanner eingbe = new Scanner(System.in);
         //String email = eingbe.nextLine();
-        String email = "aba@aa.de";
+        String email = "";
 
         if(
                 !istStringNull(email) &&
@@ -18,9 +18,9 @@ public class Main {
         } else System.out.println("nicht ok");
     }
 
-    private static boolean istStringNull(String email) throws NullPointerException{
+    private static boolean istStringNull(String email) throws EmaiNotValid{
         if(email == null || email.isBlank())
-            throw new NullPointerException("ERROR: email ist leer");
+            throw new EmaiNotValid("ERROR: email ist leer");
         return false;
     }
 
